@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "npx puppeteer browsers install chrome && node scrapper.js"
+  },
   "dependencies": {
     "express": "^5.1.0",
     "puppeteer": "^24.10.0"
