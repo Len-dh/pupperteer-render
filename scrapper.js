@@ -18,7 +18,7 @@ app.get('/scrape', async (req, res) => {
     const page = await browser.newPage();
     await page.goto(url, { waitUntil: 'networkidle2' });
 
-    await page.waitForSelector('.description__text', { timeout: 10000 });
+    await page.waitForSelector('.description__text', { timeout: 100000 });
 
     const jobDescription = await page.$eval('.description__text', el => el.innerText);
 
